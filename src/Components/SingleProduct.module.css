@@ -1,0 +1,47 @@
+.single-product{
+    width: 350px;
+    height: auto;
+   
+    margin: 1rem;
+    border: 1px solid gray;
+    padding: 1rem;
+    border-radius:5px;
+    cursor: pointer;
+}
+.single-product:hover{
+    transform: translateY(-.5%);
+}
+.img{
+    width: 350px;
+    height: auto;
+}
+.single-product img{
+    object-fit: contain;
+    width:60%;
+    height: 50%;
+   
+    text-align: center;
+}
+.rating{
+    text-align: center;
+    margin-bottom: .4rem;
+}
+hr{
+    margin: 1rem -1rem;
+    border-width: .5px;
+}
+button {
+    padding: .25rem .5rem;
+    border: 1px solid #123456;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: .5rem auto;
+    display: block;
+   
+}
+@media screen and (min-width:780px){
+    .single-product{
+    width: 350px;
+    height: 350px;
+}
+}
