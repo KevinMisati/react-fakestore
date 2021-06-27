@@ -11,4 +11,27 @@ nav{
     max-width: 1300px;
     display:flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    position: relative;
+}
+nav h1 {
+    cursor: pointer;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+.cart {
+    cursor: pointer;
+}
+.cart span{
+    position: absolute;
+    display: block;
+    transform:translateX(130%) translateY(-230%) ; 
+}
+.cart button {
+    border: none;
+    outline: none;
+    background: transparent;
 }

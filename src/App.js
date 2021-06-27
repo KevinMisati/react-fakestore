@@ -1,18 +1,32 @@
 
 import './App.css';
 import Header from "./Components/Header"
-import AllProducts from "./Components/AllProducts"
+import Home from "./Pages/Home"
 import { GlobalProvider } from "./context/GlobalProvider"
-import DisplayProducts from "./Components/DispalyProducts"
 import Footer from "./Components/Footer"
+import Cart from "./Pages/Cart"
+import {
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-function App() {
+function App () {
+
+  const showProductsInCart = (products) => {
+    const length = products.length
+  }
   return (
     <GlobalProvider>
     <div className="App">
-     <Header />
-        <AllProducts />
-        <DisplayProducts />
+        <Header />
+        <Switch>
+          
+          <Route path='/cart' component={Cart} />
+          <Route path='/' component={Home} />
+        </Switch>
+        
+       
         <Footer />
       </div>
     </GlobalProvider>

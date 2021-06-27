@@ -1,7 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import classes from "./SingleProduct.module.css"
 
-const SingleProduct = ({product}) => {
+const SingleProduct = ({ product }) => {
+    const [cartProducts,setCartProducts] = useState([])
+    const onAddToCart = (e) => {
+        e.preventDefault();
+        setCartProducts((prev) => {return [...prev,product]})
+        console.log(cartProducts)
+   }
     return (
         <div className={classes["single-product"]}>
            
@@ -19,7 +25,7 @@ const SingleProduct = ({product}) => {
                 </h4>
                 <h4>{product.title}</h4>
                 <h4>KSH {product.price}</h4>
-                <button>Add To Cart</button>
+                <button onClick={onAddToCart}>Add To Cart</button>
             </div>
             
         </div>

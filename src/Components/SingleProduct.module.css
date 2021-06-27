@@ -42,6 +42,6 @@ button {
 @media screen and (min-width:780px){
     .single-product{
     width: 350px;
-    height: 350px;
+    height: 400px;
 }
 }
